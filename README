@@ -1,0 +1,23 @@
+This is a chat program using TCP. The first program is cclient (the chat client program). The second program is the server which will act as a router/forwarder between all of the clients. The clients will connect to the server and then using this connection transmits data to server. The server will then forward the received data to the designated client. All communications between the clients goes through the server. The server acts as a forwarding agent for the clients. 
+
+How to Run Client Program:
+$: cclient handle server-name server-port 
+
+How to Run Server Program:
+$: server [port-number] 
+
+Additional Commands When cclient is running:
+%M [num-handles] destination-handle [destination-handle] [text]
+- This command allows you to send a message to one or more other handles. 
+
+%B
+- This command causes the client to block incoming messages from a specific user. 
+
+%U
+- This command unblocks incoming messages for a specific user (so undoes the %B). 
+
+%L
+- Prints out a list of the handles currently known by the server 
+
+%E
+- This is the exit command. 
